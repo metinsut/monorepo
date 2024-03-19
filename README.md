@@ -1,5 +1,7 @@
 # monorepo
 
+Bun,Next,Vite,Shadcn-ui,tailwind
+
 To install dependencies:
 
 ```bash
