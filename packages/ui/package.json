@@ -1,0 +1,26 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./src/global.css -o ./dist/global.css",
+    "lint": "eslint src/",
+    "dev": "tailwindcss -i ./src/global.css -o ./dist/global.css --watch",
+    "ui:add": "bunx --bun shadcn-ui@latest add"
+  },
+  "exports": {
+    "./global.css": "./dist/global.css",
+    "./postcss.config": "./postcss.config.js",
+    "./tailwind.config": "./tailwind.config.ts",
+    "./lib/*": "./src/lib/*.ts",
+    "./components/*": "./src/components/*.tsx"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.359.0",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
