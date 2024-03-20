@@ -1,6 +1,0 @@
-
-[0m[2m[35m$[0m [2m[1mtailwindcss -i ./src/global.css -o ./dist/global.css[0m
-
-Rebuilding...
-
-Done in 99ms.
