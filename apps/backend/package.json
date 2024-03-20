@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "clear": "rm -rf node_modules && rm -rf bun.lockb && rm -rf .turbo"
+  },
+  "dependencies": {
+    "hono": "^4.1.3"
+  }
+}
