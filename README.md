@@ -1,6 +1,6 @@
 # monorepo
 
-Bun,Next,Vite,Shadcn-ui,tailwind
+Bun,Hono,Drizzle,Next,Vite,Shadcn-ui,tailwind
 
 To install dependencies:
 
