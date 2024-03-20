@@ -4,9 +4,18 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
+    "db:generate": "drizzle-kit generate:pg --schema=./db/schema",
+    "db:studio": "drizzle-kit studio",
+    "db:push": "drizzle-kit push:pg",
     "clear": "rm -rf node_modules && rm -rf bun.lockb && rm -rf .turbo"
   },
   "dependencies": {
-    "hono": "^4.1.3"
+    "drizzle-orm": "^0.30.4",
+    "drizzle-zod": "^0.5.1",
+    "hono": "^4.1.3",
+    "postgres": "^3.4.3"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.14"
   }
 }

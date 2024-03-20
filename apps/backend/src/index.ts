@@ -1,9 +1,13 @@
-import { Hono } from 'hono'
+import { Hono } from 'hono';
+import { api } from './routes/api';
 
-const app = new Hono()
+const app = new Hono();
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+app.route('/api', api);
 
-export default app
+app.onError((err, c) => {
+  console.error(`Hono Error: ${err}`);
+  return c.text('Custom Error Message', 500);
+});
+
+export default app;
