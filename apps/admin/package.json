@@ -13,7 +13,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@repo/ui": "workspace:*"
+    "@repo/ui": "workspace:*",
+    "@repo/shared": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

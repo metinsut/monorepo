@@ -9,7 +9,7 @@
     "allowJs": true,
 
     // Bundler mode
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
@@ -25,10 +25,10 @@
     "noPropertyAccessFromIndexSignature": false,
 
     // Path
-    "baseUrl": ".",
-    "paths": {
-      "@ui/*": ["./src/*"]
-    }
+    "baseUrl": "."
+    // "paths": {
+    //   "@shared/*": ["./src/*"]
+    // }
   },
   "include": ["src"],
   "exclude": ["node_modules"]

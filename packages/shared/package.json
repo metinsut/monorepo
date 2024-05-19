@@ -1,0 +1,14 @@
+{
+  "name": "@repo/shared",
+  "module": "src/index.ts",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "lint": "eslint src/",
+    "clear": "rm -rf .turbo && rm -rf dist"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

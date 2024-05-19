@@ -18,7 +18,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+      "@brands/current": ["./src/brands/current.ts"],
+      "@brands/dir/*": ["./src/brands/*"],
+      "@repo/shared": ["../../packages/shared/src/index.ts"],
+      "src/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
