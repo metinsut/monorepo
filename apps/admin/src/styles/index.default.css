@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@config "../brands/default/tailwind.config.ts";
+
 :root {
   --destructive: 35 40% 50%;
 }

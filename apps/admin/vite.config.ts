@@ -15,7 +15,7 @@ export default defineConfig({
       '@ui': path.resolve(__dirname, '../../packages/ui/src'),
       '@shared': path.resolve(__dirname, '../../packages/shared/src'),
       '@brands/current': path.resolve(__dirname, `src/brands/current.ts`),
-      '@brands/dir': path.resolve(__dirname, `src/brands/${BRAND}`),
+      '@brands/dir': path.resolve(__dirname, `src/brands/${BRAND}`)
     },
     extensions: [
       `.${BRAND}.ts`,
@@ -29,7 +29,9 @@ export default defineConfig({
       '.jsx',
       '.tsx',
       '.json',
-    ],
+      `.${BRAND}.css`,
+      `.default.css`
+    ]
   },
   server: {
     proxy: {
@@ -37,8 +39,8 @@ export default defineConfig({
         target: `${DOMAIN}/api`,
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-    },
-  },
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 });
