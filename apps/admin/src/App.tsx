@@ -6,9 +6,9 @@ import { configs } from "@brands/current";
 
 function App() {
   return (
-    <main className='grid justify-start p-2 gap-2'>
-      <Button variant='destructive'>Click me</Button>
-      <h1 className='text-3xl font-bold underline'>Vite</h1>
+    <main className="grid justify-start p-2 gap-2">
+      <Button variant="destructive">Click me</Button>
+      <h1 className="text-3xl font-bold underline">Vite</h1>
       <Input />
       <About />
       <p>{formatPrice(55555555555)}</p>

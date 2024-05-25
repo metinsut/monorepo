@@ -32,7 +32,7 @@
       "arrowParentheses": "always",
       "bracketSameLine": false,
       "bracketSpacing": true,
-      "jsxQuoteStyle": "single",
+      "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
       "semicolons": "always",
       "trailingComma": "all"
