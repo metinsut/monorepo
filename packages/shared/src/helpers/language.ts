@@ -1,9 +1,9 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
 export enum SupportedLangs {
-  TR = 'tr',
-  EN = 'en',
+  TR = "tr",
+  EN = "en",
 }
 
 export function initializeLanguage({
@@ -30,26 +30,26 @@ export function initializeLanguage({
   });
 
   if (onLanguageChanged) {
-    i18n.on('languageChanged', onLanguageChanged);
+    i18n.on("languageChanged", onLanguageChanged);
   }
 }
 
 export function addFeatureLanguages(
   records: Record<SupportedLangs, Record<string, unknown>>,
-  namespace = 'translation'
+  namespace = "translation",
 ) {
   setTimeout(() => {
-    Object.entries(records).forEach(([lang, json]) => {
+    for (const [lang, json] of Object.entries(records)) {
       i18n.addResourceBundle(lang, namespace, json, true, true);
-    });
+    }
   });
 }
 
 export function changeLanguage(lang?: SupportedLangs) {
-  lang =
+  const language =
     lang ??
     (i18n.language === SupportedLangs.EN
       ? SupportedLangs.TR
       : SupportedLangs.EN);
-  i18n.changeLanguage(lang);
+  i18n.changeLanguage(language);
 }

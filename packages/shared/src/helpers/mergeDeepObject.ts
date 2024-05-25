@@ -1,12 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 type PropsType = Record<string, any>;
 
 export function mergeDeepObject(...objects: PropsType[]) {
-  const isObject = (obj: PropsType) => obj && obj.constructor.name === 'Object';
+  const isObject = (obj: PropsType) => obj && obj.constructor.name === "Object";
 
   return objects.reduce((prev, obj) => {
     if (obj) {
-      Object.keys(obj).forEach((key) => {
+      for (const key of Object.keys(obj)) {
         const pVal = prev[key];
         const oVal = obj[key];
 
@@ -15,7 +15,7 @@ export function mergeDeepObject(...objects: PropsType[]) {
         } else {
           prev[key] = oVal;
         }
-      });
+      }
     }
 
     return prev;

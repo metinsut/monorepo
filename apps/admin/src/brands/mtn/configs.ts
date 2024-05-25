@@ -1,3 +1,3 @@
 export default {
-  name: 'Mtn',
+  name: "Mtn",
 };

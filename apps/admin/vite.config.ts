@@ -1,46 +1,46 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "node:path";
 
-const BRAND = process.env.VITE_BRAND ?? 'mtn';
-const DOMAIN = process.env.VITE_DOMAIN ?? '/';
+const BRAND = process.env.VITE_BRAND ?? "mtn";
+const DOMAIN = process.env.VITE_DOMAIN ?? "/";
 
-console.log(`### Envs --> `, { BRAND, DOMAIN });
+console.log("### Envs --> ", { BRAND, DOMAIN });
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@ui': path.resolve(__dirname, '../../packages/ui/src'),
-      '@shared': path.resolve(__dirname, '../../packages/shared/src'),
-      '@brands/current': path.resolve(__dirname, `src/brands/current.ts`),
-      '@brands/dir': path.resolve(__dirname, `src/brands/${BRAND}`)
+      "@ui": path.resolve(__dirname, "../../packages/ui/src"),
+      "@shared": path.resolve(__dirname, "../../packages/shared/src"),
+      "@brands/current": path.resolve(__dirname, "src/brands/current.ts"),
+      "@brands/dir": path.resolve(__dirname, `src/brands/${BRAND}`),
     },
     extensions: [
       `.${BRAND}.ts`,
-      '.default.ts',
+      ".default.ts",
       `.${BRAND}.tsx`,
-      '.default.tsx',
-      '.mjs',
-      '.js',
-      '.mts',
-      '.ts',
-      '.jsx',
-      '.tsx',
-      '.json',
+      ".default.tsx",
+      ".mjs",
+      ".js",
+      ".mts",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".json",
       `.${BRAND}.css`,
-      `.default.css`
-    ]
+      ".default.css",
+    ],
   },
   server: {
     proxy: {
-      '/api/': {
+      "/api/": {
         target: `${DOMAIN}/api`,
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  }
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
 });

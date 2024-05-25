@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "build": "tailwindcss -i ./src/global.css -o ./dist/global.css",
-    "lint": "eslint src/",
     "dev": "tailwindcss -i ./src/global.css -o ./dist/global.css --watch",
     "ui:add": "bunx --bun shadcn-ui@latest add",
     "clear": "rm -rf .turbo && rm -rf dist"

@@ -1,3 +1,3 @@
-export * from './language';
-export * from './formatter';
-export * from './mergeDeepObject';
+export * from "./language";
+export * from "./formatter";
+export * from "./mergeDeepObject";
